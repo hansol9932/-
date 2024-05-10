@@ -1,0 +1,168 @@
+#allProduct {
+	width: 100%;
+	height: 500px;
+	// padding: 200px 0;
+	background-color: #8f947cbb;
+	.allProduct_inner {
+		width: 1180px;
+		margin: 200px auto 500px;
+		// background-color: #999;
+		position: relative;
+		h2 {
+			// top: 30px;
+			// position: absolute;
+			// top: 0%;
+			// left: 50%;
+			// transform: translate(-50% -50%);
+			text-align: center;
+			font: bold 25px/1 'SungDongMyungjo';
+			letter-spacing: 2px;
+			padding-top: 50px;
+			margin-bottom: 50px;
+			color: #ffffff;
+		}
+		&::before {
+			position: absolute;
+			content: '';
+			display: block;
+			width: 300px;
+			height: 2.5px;
+			background-color: #fff;
+			top: 60px;
+			left: 150px;
+			opacity: 0.2;
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			display: block;
+			width: 300px;
+			height: 2.5px;
+			background-color: #fff;
+			top: 60px;
+			right: 150px;
+			opacity: 0.2;
+		}
+		.wrap {
+			width: 100%;
+			// border: 1px solid red;
+			overflow: hidden;
+			background-color: #ffffff65;
+			border-top-left-radius: 80px;
+			border-top-right-radius: 80px;
+			padding: 25px 25px 0;
+			.panel {
+				width: 100%;
+				margin-left: -25%;
+				// margin: 0 auto;
+				// margin-top: 250px;
+				height: 500px;
+				// line-height: 500px;
+				// border: 5px solid blue;
+				display: flex;
+				li {
+					width: 100%;
+					height: 300px;
+					// padding: 0px;
+					margin: 50px 0 50px 0;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					// background-color: #fff;
+					gap: 50px;
+					article {
+						width: 244px;
+						height: 292px;
+						// background-color: #fff;
+						margin: 20px;
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: contain;
+							margin-top: -30px;
+							margin-bottom: 35px;
+						}
+						p {
+							text-align: center;
+							font: bold 13px/1.5 'GowunBatang-Regular';
+							padding: 20px;
+							color: #5b5f4e;
+							letter-spacing: 2px;
+						}
+						a {
+							// position: absolute;
+							// bottom: -30px;
+							// left: 50%;
+							// transform: translateX(-50%);
+							display: block;
+							width: 100px;
+							height: 30px;
+							border: 1px solid #848a735e;
+							border-radius: 5px;
+							text-align: center;
+							font: 500 10px/30px 'SOGANGUNIVERSITYTTF';
+							letter-spacing: 1.5px;
+							transition: all 0.5s;
+							color: #555;
+							margin: 0 auto;
+							&:hover {
+								background-color: #fff;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.prev {
+		display: block;
+
+		// background-color: #000;
+		font-size: 70px;
+		color: #fff;
+		position: absolute;
+		top: 50%;
+		left: -15%;
+		opacity: 0.5;
+	}
+	.next {
+		display: block;
+		font-size: 70px;
+		color: #fff;
+		position: absolute;
+		top: 50%;
+		right: -15%;
+		opacity: 0.5;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#allProduct {
+		.allProduct_inner {
+			width: 100%;
+			margin: 200px auto 0px;
+			&::before {
+				display: none;
+			}
+			&::after {
+				display: none;
+			}
+			.wrap {
+				padding: 0px;
+				.panel {
+					margin-left: 0%;
+					width: 100%;
+					margin: 0 auto;
+					// background-color: aqua;
+					display: flex;
+					flex-direction: column;
+					flex-wrap: wrap;
+					justify-content: space-between;
+					align-items: center;
+				}
+			}
+		}
+	}
+}
+
+// 반응형 슬라이드 어캐하는지 모르겟슴요

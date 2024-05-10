@@ -1,0 +1,44 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'SOGANGUNIVERSITYTTF';
+	src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SOGANGUNIVERSITYTTF.woff2')
+		format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'GowunBatang-Regular';
+	src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'SungDongMyungjo';
+	font-style: normal;
+	font-weight: 400;
+	src: url('//fastly.jsdelivr.net/korean-webfonts/1/orgs/govs/sdgu/SungDongMyungjo/SungDongMyungjoR.woff2')
+			format('woff2'),
+		url('//fastly.jsdelivr.net/korean-webfonts/1/orgs/govs/sdgu/SungDongMyungjo/SungDongMyungjoR.woff')
+			format('woff');
+}
+// commom
+@import './common/reset';
+@import './common/header';
+@import './common/footer';
+
+// main
+@import './main/MainFragrance';
+@import './main/product_slide';
+@import './main/social';
+@import './main/vegan';
+@import './main/allProduct';
+
+// sub
+@import './sub/sub_page';
+@import './sub/about';
+@import './sub/login';
+@import './sub/product';
+@import './sub/q&a';
+
+// @media screen and (max-width: 400px) {}

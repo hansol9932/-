@@ -1,0 +1,88 @@
+// 메인페이지 js 부분
+
+//25% 슬라이드
+const panel = document.querySelector('.panel');
+const lis = document.querySelectorAll('li');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let enableClick = false;
+
+panel.prepend(panel.lastElementChild);
+
+prevBtn.addEventListener('click', (e) => {
+	e.preventDefault();
+
+	if (!enableClick) {
+		enableClick = true;
+		panel.style.transition = 'margin-left 0.5s';
+		panel.style.marginLeft = '0%';
+		panel.addEventListener(
+			'transitionend',
+			() => {
+				panel.style.transition = 'margin-left 0s';
+				panel.prepend(panel.lastElementChild);
+				panel.style.marginLeft = '-25%';
+				enableClick = false;
+			},
+			{ once: true }
+		);
+	}
+});
+
+nextBtn.addEventListener('click', (e) => {
+	e.preventDefault();
+
+	if (!enableClick) {
+		enableClick = true;
+		panel.style.transition = 'margin-left 0.5s';
+		panel.style.marginLeft = '-50%';
+
+		panel.addEventListener(
+			'transitionend',
+			() => {
+				panel.style.transition = 'margin-left 0s';
+				panel.append(panel.firstElementChild);
+				panel.style.marginLeft = '-25%';
+				enableClick = false;
+			},
+			{ once: true }
+		);
+	}
+});
+
+// // 햄버거버튼
+// let btncall = document.querySelector('.btncall');
+// let menu_mobile = document.querySelector('.menu_mobile');
+
+// btncall.addEventListener('click', (e) => {
+// 	e.preventDefault();
+// 	btncall.classList.toggle('on');
+// 	menu_mobile.classList.toggle('on');
+// });
+
+// // 헤더 js 부분
+// let offset = $('#header_top').offset();
+
+// $(window).scroll(function () {
+// 	// console.log($(document).scrollTop());
+// 	if ($(document).scrollTop() > offset.top) {
+// 		$('#header_top').addClass('on');
+// 	} else {
+// 		$('#header_top').removeClass('on');
+// 	}
+// });
+
+// 헤더 js 부분
+let offset = $('#header_top').offset();
+
+console.log(offset.top);
+
+$(window).scroll(function () {
+	// console.log($(document).scrollTop());
+	if ($(document).scrollTop() > offset.top) {
+		$('#header_top').addClass('on');
+	} else {
+		$('#header_top').removeClass('on');
+	}
+});

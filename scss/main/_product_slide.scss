@@ -1,0 +1,59 @@
+.product_slide {
+	.slide1 {
+		width: 100%;
+		height: 350px;
+		margin: 500px auto 0;
+		.swiper-wrapper {
+			.swiper-slide {
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					position: relative;
+				}
+				.txt_slide {
+					text-align: center;
+					h3 {
+						position: absolute;
+						top: 40%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						color: #ffffffdc;
+						text-shadow: 6px 3px 3px rgb(59, 59, 59);
+						font: 20px/1.5 'SOGANGUNIVERSITYTTF';
+						letter-spacing: 2px;
+					}
+					span {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, 30%);
+						font: 15px/1.5 'GowunBatang-Regular';
+						letter-spacing: 2px;
+						text-shadow: 6px 3px 3px rgb(0, 0, 0);
+						color: #fff;
+						width: 100%;
+						height: 50%;
+						// .swiper-pagination-bullet {
+						// 	background-color: none;
+						// }
+					}
+				}
+			}
+		}
+		.swiper-pagination {
+			.swiper-pagination-bullet-active {
+				background: none;
+				background-color: #bec5a5;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.product_slide {
+		.slide1 {
+			margin: 200px auto 0;
+		}
+	}
+}
