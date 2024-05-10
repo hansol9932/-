@@ -108,6 +108,7 @@ body {
   z-index: 100;
   padding: 35px 30px;
   transition: all 0.5s;
+  display: none;
 }
 #header .header_inner .menu_mobile h2 {
   width: 162px;
@@ -274,6 +275,9 @@ body {
     width: 100%;
   }
   #header .header_inner .btncall {
+    display: block;
+  }
+  #header .header_inner .menu_mobile {
     display: block;
   }
   #header .header_inner #header_top {

@@ -73,7 +73,7 @@
 			z-index: 100;
 			padding: 35px 30px;
 			transition: all 0.5s;
-
+			display: none;
 			h2 {
 				width: 162px;
 				height: 104px;
@@ -289,9 +289,9 @@
 			.btncall {
 				display: block;
 			}
-			// .menu_mobile {
-			// 	left: 0;
-			// }
+			.menu_mobile {
+				display: block;
+			}
 			#header_top {
 				width: 100%;
 				.header_menu {
