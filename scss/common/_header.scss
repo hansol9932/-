@@ -114,21 +114,18 @@
 		#header_top {
 			width: 100%;
 			height: 70px;
-			// margin: 0 auto;
-			padding: 40px 150px 40px 150px;
+			padding: 15px 150px 15px 150px;
 			position: absolute;
-			// top: 20px;
-			// left: 50%;
-			// transform: translatex(-50%);
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			z-index: 5;
 			transition: all 1s;
-			// background-color: #fff;
-			// filter: blur(3px);
+			// background-color: rgba(255, 255, 255, 0.2);
+			// backdrop-filter: blur(25rem);
+			background: transparent;
+			backdrop-filter: blur(5px);
 			border-bottom: 1px solid #797979;
-			backdrop-filter: blur(25rem);
 			&.on {
 				width: 100%;
 				height: 70px;
@@ -141,7 +138,17 @@
 				z-index: 90;
 				background-color: #fff;
 				// box-shadow: 5px 5px 5px #425549;
-				padding: 40px 150px 40px 150px;
+				padding: 15px 150px 15px 150px;
+				h1 {
+					a {
+						img {
+							background-image: url(../../img/allproduct/가방&매트/가방.png);
+							background-repeat: no-repeat;
+							background-position: center;
+							background-size: cover;
+						}
+					}
+				}
 				.header_menu {
 					a {
 						font-weight: 800;
@@ -168,28 +175,29 @@
 			.header_menu {
 				width: 100%;
 				display: flex;
-				justify-content: space-between;
+				justify-content: space-around;
 				align-items: center;
+				gap: 100px;
 				ul {
 					// background-color: brown;
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
-					width: 30%;
+					width: 300px;
 					// height: 100%;
-					// gap: 300px;
+					// gap: 50px;
 					li {
 						// background-color: aquamarine;
 						a {
-							font: 20px/1 'SungDongMyungjo';
-							color: #fff;
-							letter-spacing: 2px;
+							font: 300 15px/1 'Pretendard-Regular';
+							color: #e1d8cf;
+							letter-spacing: 3px;
 							transition: 0.3s;
 							position: relative;
 							transition: all 0.5s;
 							&::before {
 								content: '';
-								background: #fff;
+								background: #e1d8cf;
 								bottom: -4px;
 								width: 100%;
 								height: 2px;
@@ -330,5 +338,27 @@
 				}
 			}
 		}
+	}
+}
+
+.content {
+	width: 100%;
+	// background-color: #f5f7f6;
+	text-align: center;
+
+	h3 {
+		padding: 300px 0 150px 0px;
+		font: 500 30px/3 'Pretendard-Regular';
+		color: #333;
+		letter-spacing: -1px;
+		strong {
+			font: 800 30px/3 'Pretendard-Regular';
+		}
+	}
+	img {
+		width: 90%;
+		height: 90%;
+		object-fit: cover;
+		padding: 0 70px 0 70px;
 	}
 }

@@ -6,7 +6,7 @@
 		<title>한솔이의 프로젝트</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/style.css?after" />
 		<script src="./script/jquery-3.5.1.min.js"></script>
 		<script defer src="./script/main.js"></script>
 		<script defer src="./script/common.js"></script>
@@ -24,7 +24,7 @@
 				<div class="menu_mobile">
 					<h2>
 					  <a href="./index.html">
-						<img src="./img/모스오리진 로고 80x50.png" alt="">
+						<img src="./img/logo(w).png" alt="">
                         <span>moss menu list</span>
 					  </a>
 					</h2>
@@ -38,8 +38,10 @@
 				<header id="header_top">
 					<h1>
 						<a href="./index.html"
-							><img src="./img/모스오리진 로고 80x50.png" alt="logo"
-						/></a>
+							><img src="./img/logo(w).png" alt="logo"
+						/>
+						
+					</a>
 					</h1>
 					<div class="header_menu">
 						<ul class="header_left">
@@ -59,7 +61,7 @@
 					<!-- <h2 class="main_moss_left">MOSS</h2>
 					<h2 class="main_moss_right">ORIGIN</h2> -->
 					<h2>
-						쉼이 필요한 순간,<br>자연이 전하는 힐링
+						쉼이 필요한 순간<br>자연이 전하는 힐링
 						<p>당신의 회색빛 라이프를 자연의색으로 채워보세요</p>
 					</h2>
 					<!-- <div class="txt">
@@ -68,32 +70,20 @@
 				</div>
 			</div>
 		</div>
-		<!-- 헤더 완성  -->
-		<div class="MainFragrance">
-			<h2>FRAGRANCE</h2>
-			<div class="MainFragrance_img">
-				<article>
-					<img src="./img/header_img/리와인드 헤더이미지(2).png" alt="" />
-					<a href="#">REWIND</a>
-				</article>
-				<article>
-					<img src="./img/header_img/퍼즈 헤더이미지.png" alt="" />
-
-					<a href="#">PAUSE</a>
-				</article>
-				<article>
-					<img src="./img/header_img/린 헤더이미지 (2).png" alt="" />
-
-					<a href="#">LEAN</a>
-				</article>
+		<div class="content">
+			<h3>
+				자연의 휴식과 생명력을 떠올릴 수 있는 향을 느껴보세요
+				<br>
+				<strong>(#)TAG MOSS</strong>
+			</h3>
+				<img src="./img/컨텐츠/컨텐츠 이미지.jpg" alt="">
 			</div>
 		</div>
-		<!-- 두번째 섹션 완성  -->
 		<div class="product_slide">
 			<div class="swiper slide1">	
 			<div class="swiper-wrapper">
 			  <div class="swiper-slide">
-				<img src="./img/리와인드/리와인드_슬라이드.jpg" alt="" />
+				<img src="./img/버티컬 슬라이드/리와인드 슬라이드.jpg" alt="" />
 				<div class="txt_slide">
 					<h3>#REWIND</h3>
 					<span>
@@ -103,7 +93,7 @@
 				</div>
 			</div>
 			  <div class="swiper-slide">
-				<img src="./img/퍼즈/퍼즈_슬라이드.jpg" alt="" />
+				<img src="./img/버티컬 슬라이드/퍼즈 슬라이드.jpg" alt="" />
 				<div class="txt_slide">
 					<h3>
 						#PAUSE
@@ -115,7 +105,7 @@
 				</div>
 			</div>
 			  <div class="swiper-slide">
-				<img src="./img/린/린 슬라이드2.jpg" alt="" />
+				<img src="./img/버티컬 슬라이드/린 슬라이드.jpg" alt="" />
 				<div class="txt_slide">
 					<h3>#LEAN</h3>
 					<span>산들바람을 맞은 과일의 신선하고 달달한 그린 플로럴 향</span>
@@ -125,7 +115,7 @@
 			<div class="swiper-pagination"></div>
 		  </div>
 		</div>
-		  <script>
+		<script>
 			var swiper = new Swiper(".slide1", {
 			  direction: "vertical",
 			  pagination: {
@@ -139,8 +129,31 @@
 					// 사용자가 개입하면 멈추겠다 , false를 쓰면 사용자가 개입하든말든 계속된다
 				},
 			});
-		  </script>
-		<!-- 슬라이드 완성  -->
+		</script>	
+		<div class="MainFragrance">
+			<div class="wrap">
+				<h2>MOSS SIGNATRE
+					<P>모스의 시그니처 제품을 지금 만나보세요</P>
+				</h2>
+				
+				<div class="MainFragrance_img">
+					<article>
+						<img src="./img/header_img/리와인드 헤더이미지(2).png" alt="" />
+						<a href="#">REWIND</a>
+					</article>
+					<article>
+						<img src="./img/header_img/퍼즈 헤더이미지.png" alt="" />
+				
+						<a href="#">PAUSE</a>
+					</article>
+					<article>
+						<img src="./img/header_img/린 헤더이미지 (2).png" alt="" />
+				
+						<a href="#">LEAN</a>
+					</article>
+			</div>
+			</div>
+		</div>
 		<div id="allProduct">
 			<div class="allProduct_inner">
 				<h2> ALL PRODUCT </h2>
