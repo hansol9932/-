@@ -1,0 +1,204 @@
+.tabmenu {
+	width: 100%;
+	.sub_FAQ_visual {
+		width: 100%;
+		height: 500px;
+		background-image: url(../../img/sub/1.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	.sub_FAQ_visual_inner {
+		width: 1180px;
+		margin: 150px auto;
+		h2 {
+			text-align: center;
+			ul {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 20px;
+				li {
+					&.on {
+						a {
+							color: #ff0000;
+						}
+					}
+
+					a {
+						font: 600 15px/1 'Italiana', 'arial';
+						color: #333;
+
+						&:hover {
+							color: #000000;
+							text-decoration: underline #999;
+							text-underline-position: under;
+							text-underline-offset: 3px;
+						}
+					}
+					&::after {
+						content: '|';
+						padding: 0 3px 0 8px;
+						color: #999;
+					}
+					&:last-child {
+						&::after {
+							content: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	#FAQ {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #f5f8ff;
+		width: 100%;
+		height: 100vh;
+		.wrap {
+			margin: 0px 40px;
+			max-width: 100%;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			display: none;
+			&.on {
+				display: block;
+			}
+			// h1 {
+			// 	color: #333;
+			// }
+			.tab {
+				position: relative;
+				background-color: #fff;
+				padding: 0px 20px 20px;
+				border-radius: 5px;
+				box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.05);
+				overflow: hidden;
+				input[type='radio'] {
+					// 대상을 안보이게(사라지게)하는 방법
+					// display: none;
+					// 완전하게 사라지게 함으로써 기능도 사라짐
+					// opacity: 0;
+					// 단순하게 투명도만 0을 만든정도
+					//따라서 해당요소는 그 위치에 존재한다
+					appearance: none;
+					// display:none과 opacity:0의 중간형태로
+					//존재는 하지만 공간은 차지하지 않고
+					//기능을 사용할 수 있다
+					// visibility: hidden;
+					//visibility: hidden;은 거의 opacity:0과
+					//같습니다.
+					//visibility: hidden;는
+					//차이점은 상호작용이 표현이 안된다
+					&:checked + label::after {
+						color: red;
+					}
+					&:checked ~ .content {
+						// max-height: 100%;
+						max-height: 100vh;
+					}
+					&:checked ~ label {
+						// h2 {
+						// 	width: 100%;
+						// 	height: 100%;
+						// 	position: absolute;
+						// 	top: 0;
+						// 	left: 0;
+						// 	color: rgba(255, 255, 255, 0.2);
+						// 	font-size: 100px;
+						// 	transition: all 0.2s;
+						// 	justify-content: flex-end;
+						// 	padding: 20px;
+						// }
+						h3 {
+							background-color: #fff;
+							padding: 2px 10px;
+							border-radius: 2px;
+							color: #333;
+							box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+						}
+					}
+				}
+				label {
+					display: flex;
+					align-items: center;
+					cursor: pointer;
+					// 웹 접근성 : 클릭이 가능한 대상은
+					//클릭을 할 수 있다는 정보를 전달하기 위해
+					//커서 포인터를 써주어 표시한다
+					&::after {
+						content: '+';
+						position: absolute;
+						right: 20px;
+						font-size: 32px;
+						color: rgba(0, 0, 0, 0.1);
+					}
+					h2 {
+						width: 40px;
+						height: 40px;
+						background-color: #333;
+						color: #fff;
+						font-size: 20px;
+						border-radius: 5px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						margin-right: 10px;
+					}
+					h3 {
+						position: relative;
+						font-weight: 500;
+						color: #333;
+						z-index: 10;
+					}
+				}
+				.content {
+					// max-height: 0px;
+					// overflow: hidden;
+					transition: all 1s;
+					padding: 0px;
+					p {
+						position: relative;
+						z-index: 10;
+						padding: 17px 0px;
+						color: #333;
+						padding: 0;
+					}
+				}
+				// &:nth-of-type(1) {
+				// 	label {
+				// 		h2 {
+				// 			background: linear-gradient(135deg, #c94949, #93a857);
+				// 		}
+				// 	}
+				// }
+				// &:nth-of-type(2) {
+				// 	label {
+				// 		h2 {
+				// 			background: linear-gradient(135deg, #dfa21f, #b8d46a);
+				// 		}
+				// 	}
+				// }
+				// &:nth-of-type(3) {
+				// 	label {
+				// 		h2 {
+				// 			background: linear-gradient(135deg, #6b64d1, #1b29e9);
+				// 		}
+				// 	}
+				// }
+				// &:nth-of-type(4) {
+				// 	label {
+				// 		h2 {
+				// 			background: linear-gradient(135deg, #8a1e50, #4d344e);
+				// 		}
+				// 	}
+				// }
+			}
+		}
+	}
+}
